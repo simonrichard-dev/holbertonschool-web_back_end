@@ -5,7 +5,7 @@ import random
 from typing import Union
 
 
-async def wait_random(max_delay: Union[int, float] = 10) -> float:
+async def wait_random(max_delay: int = 10) -> float:
     """ corotine that wait a random delay and return it
         Args:
             max_delay: float;
