@@ -4,8 +4,13 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay = 10):
-    """ corotine that wait a random delay and return it """
+async def wait_random(max_delay: float = 10) -> float:
+    """ corotine that wait a random delay and return it
+        Args:
+            max_delay: float;
+        Return:
+            float;
+    """
     dealay = random.uniform(0, max_delay)
     await asyncio.sleep(dealay)
     return (dealay)
