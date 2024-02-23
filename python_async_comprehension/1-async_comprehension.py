@@ -17,5 +17,3 @@ async def async_comprehension() -> List[float]:
     """
     results = [i async for i in async_generator()]
     return results
-
-asyncio.run(async_comprehension())
