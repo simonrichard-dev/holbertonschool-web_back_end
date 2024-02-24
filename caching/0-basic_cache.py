@@ -5,6 +5,8 @@ from typing import Any, Optional
 BaseCaching = __import__('base_caching').BaseCaching
 
 class BasicCache(BaseCaching):
+    """ Caching system BasicCache that inherits from BaseCaching.
+    """
     def put(self, key, item):
         """Add an item to the cache
         if both key and item are not None"""
