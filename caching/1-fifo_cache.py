@@ -11,14 +11,14 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """Add an item to the cache
         if both key and item are not None"""
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            for _ in range(len(self.cache_data)):
-                last_key = list(self.cache_data)[-1]
-                print('DISCARD: ' + self.cache_data[last_key])
-                del self.cache_data[last_key]
-            self.cache_data[key] = item
-        elif key is not None and item is not None:
-            self.cache_data[key] = item
+        if key is not None and item is not None:
+            self.cache_data[key] = item # add item at end of dict
+            if len(self.cache_data) <= BaseCaching.MAX_ITEMS:
+                pass
+            elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+                first_key = list(self.cache_data)[0]
+                print('DISCARD: ' + first_key)
+                del self.cache_data[first_key]
         else:
             pass
 
