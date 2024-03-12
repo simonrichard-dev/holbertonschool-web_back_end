@@ -1,6 +1,6 @@
 # <p align="center">Personal Data</p>
 
-![personal data](https://github.com/simonrichard-dev/holbertonschool-web_back_end/assets/picture.jpeg)
+![personal data](holbertonschool-web_back_end\personal_data\assets\picture.jpeg)
 
 
 ## 📝 Description
