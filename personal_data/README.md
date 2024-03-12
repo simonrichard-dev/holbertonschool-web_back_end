@@ -1,7 +1,6 @@
 # <p align="center">Personal Data</p>
 
-![personal data](holbertonschool-web_back_end\personal_data\assets\picture.jpeg)
-
+![personal data](https://github.com/simonrichard-dev/holbertonschool-web_back_end/blob/6177714438ef7b9c91115c8514982cf2bb7504a2/personal_data/assets/picture.jpeg)
 
 ## 📝 Description
 This project entails a comprehensive training program aimed at enhancing proficiency in data security practices. Participants will delve into various aspects, including identifying personally identifiable information (PII), implementing robust measures such as log filtering to conceal PII fields, encrypting passwords, and validating inputs. Moreover, the project emphasizes the secure authentication to databases using environment variables. Through hands-on learning experiences, participants will develop a thorough understanding of these concepts, enabling them to proficiently navigate data security challenges.
