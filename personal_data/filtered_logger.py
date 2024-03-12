@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""
-Filter Datum
-"""
+""" Module for implementing a filter_datum function """
 
 from typing import List
 import re
+
 
 def filter_datum(
         fields: List[str],
@@ -12,8 +11,8 @@ def filter_datum(
         message: str,
         separator: str
         ) -> str:
-    """Obfuscates specified fields in a log message."""
+    """ Function that returns the log message obfuscated """
     for field in fields:
-        message = re.sub(f"{field}=[^;{separator}]*",
-                         f"{field}={redaction}", message)
+        pattern = (f"{field}=.*?{separator}")
+        message = re.sub(pattern, (f"{field}={redaction}{separator}"), message)
     return message
