@@ -13,5 +13,7 @@ def filter_datum(
         separator: str
         ) -> str:
     """Obfuscates specified fields in a log message."""
-    return re.sub(r'(' + '|'.join(fields) + ')=([^' + separator + ']+)',
-                  r'\1=' + redaction, message)
+    for field in fields:
+        message = re.sub(f"{field}=[^;{separator}]*",
+                         f"{field}={redaction}", message)
+    return message
