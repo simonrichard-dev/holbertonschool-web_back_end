@@ -7,7 +7,7 @@ import logging
 import csv
 
 # Define the PII fields from the user_data.csv file
-PII_FIELDS = ('name','email','phone','ssn','password')
+PII_FIELDS = ('name', 'email', 'phone', 'ssn', 'password')
 
 
 class RedactingFormatter(logging.Formatter):
@@ -55,7 +55,7 @@ def get_logger() -> logging.Logger:
 
     # Use a StreamHandler with RedactingFormatter as formatter
     stream_handler = logging.StreamHandler()
-    formatter = RedactingFormatter(fields=PII_FIELDS)
+    formatter = RedactingFormatter(PII_FIELDS)
     stream_handler.setFormatter(formatter)
 
     # Add the stream handler to the logger
