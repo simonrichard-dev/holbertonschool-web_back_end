@@ -4,6 +4,10 @@
 from typing import List
 import re
 import logging
+import csv
+
+# Define the PII fields from the user_data.csv file
+PII_FIELDS = ('name','email','phone','ssn','password')
 
 
 class RedactingFormatter(logging.Formatter):
@@ -38,3 +42,23 @@ def filter_datum(
         pattern = (f"{field}=.*?{separator}")
         message = re.sub(pattern, (f"{field}={redaction}{separator}"), message)
     return message
+
+
+def get_logger() -> logging.Logger:
+    """ function that takes no arguments and returns a logging.Logger """
+    # Initialize logger named "user_data"
+    logger = logging.getLogger("user_data")
+    logger.setLevel(logging.INFO)  # Only log messages up to logging.INFO level
+
+    # Do not propagate messages to other loggers
+    logger.propagate = False
+
+    # Use a StreamHandler with RedactingFormatter as formatter
+    stream_handler = logging.StreamHandler()
+    formatter = RedactingFormatter(fields=PII_FIELDS)
+    stream_handler.setFormatter(formatter)
+
+    # Add the stream handler to the logger
+    logger.addHandler(stream_handler)
+
+    return logger
