@@ -11,6 +11,7 @@ class Cache:
     """  class to write data to Redis """
 
     def __init__(self):
+        """ Initialize the Cache with a Redis client. """
         self._redis = redis.Redis()
         self._redis.flushdb()
 
@@ -18,5 +19,5 @@ class Cache:
         """ takes a data argument and returns a string """
         key = str(uuid.uuid4())  # Generate a random key
         # Store data in Redis with the generated key
-        self._redis.set(name=key, value=data)
+        self._redis.set(key, data)
         return key
