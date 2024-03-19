@@ -2,7 +2,7 @@
 
 ![redis basics](https://github.com/simonrichard-dev/holbertonschool-web_back_end/blob/main/0x0B_redis_basic/assets/A-Guide-to-Redis-Python_Watermarked.fadbf320f71f.jpg)
 
-## Description :speech_ballon:
+## Description :speech_balloon:
 This project focuses on learning the basics of using Redis for various operations, including acting as a simple cache. It involves setting up Redis on Ubuntu 18.04, using it within a container, and performing tasks such as writing and reading data to and from Redis, incrementing values, storing and retrieving lists, and more.
 
 ## Resources :books:
