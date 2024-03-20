@@ -27,7 +27,7 @@ class Cache:
         """
         Retrieve data from Redis using the given key and optionally convert it back to the desired format.
         """
-        data = self._redis.get(key)
+        data = self._redis.get(name=key)
         if data is None:
             return None
         if fn is not None:
