@@ -28,10 +28,9 @@ class Cache:
         Retrieve data from Redis using the given key and optionally convert it back to the desired format.
         """
         data = self._redis.get(name=key)
-        if data is None:
-            return None
-        if fn is not None:
+        if data is not None and fn:
             return fn(data)
+        return data
 
     def get_str(self, key: str) -> Optional[str]:
         """ 
