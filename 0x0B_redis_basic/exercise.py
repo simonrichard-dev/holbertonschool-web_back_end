@@ -35,7 +35,7 @@ def call_history(method: Callable) -> Callable:
         return output
     return wrapper
 
-def replay(self, method: Callable) -> None:
+def replay(method: Callable) -> None:
     """ Display the history of calls of a particular function."""
 
     r = method.__self__._redis
