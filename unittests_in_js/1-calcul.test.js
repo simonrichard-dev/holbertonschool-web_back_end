@@ -35,6 +35,14 @@ describe('calculateNumber', function() {
     assert.equal(calculateNumber('SUM', -1, 3), 2);
   })
 
+  it('should return undefined when missing first argument', () => {
+    assert.equal(calculateNumber('', -1, 3), undefined);
+  })
+
+  it('should return undefined if first argument not correct', () => {
+    assert.equal(calculateNumber('SEUM', -1, 3), undefined);
+  })
+
 
   // SUBSTRACT
 
