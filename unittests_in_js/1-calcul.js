@@ -1,8 +1,8 @@
 /**
- * 
- * @param {string} type 
- * @param {number} a 
- * @param {number} b 
+ *
+ * @param {string} type
+ * @param {number} a
+ * @param {number} b
  * @returns the result of the operation
  */
 
