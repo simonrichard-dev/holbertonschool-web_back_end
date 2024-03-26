@@ -6,6 +6,10 @@ describe('calculateNumber', function() {
   it('should return 4 when rounding 1 and 3', function() {
     assert.strictEqual(calculateNumber(1, 3), 4);
   });
+  
+  it('should return 4 when rounding 1 and PI', function() {
+    assert.strictEqual(calculateNumber(1, Math.PI), 4);
+  });
 
   it('should return 5 when rounding 1 and 3.7', function() {
     assert.strictEqual(calculateNumber(1, 3.7), 5);
