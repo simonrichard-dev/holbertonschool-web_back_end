@@ -17,7 +17,6 @@ function calculateNumber(type, a, b) {
         } else {
             return Math.round(a) / Math.round(b);
         }
-      
     }
 }
 
