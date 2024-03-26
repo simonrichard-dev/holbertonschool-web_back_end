@@ -1,16 +1,16 @@
 {
     "name": "nom_du_projet",
     "version": "1.0.0",
-    "description": "Description du projet",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "test": "mocha"
     },
+    
     "keywords": [],
-    "author": "Votre Nom",
+    "author": "",
     "license": "MIT",
     "devDependencies": {
         "mocha": "^10.3.0"
     }
 }
-
