@@ -46,6 +46,7 @@ describe('Tests for DIVIDE', function() {
     it('Correctly returns 0.2 when dividing 1.4 by 4.5', () => {
         expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
     });
+
     it('Correctly returns Error when dividing by 0', () => {
         expect(calculateNumber('DIVIDE', 3, 0)).to.equal('Error');
     });
