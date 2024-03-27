@@ -1,16 +1,18 @@
 {
-    "name": "nom_du_projet",
+    "name": "unittests_in_js",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "test": "mocha"
     },
-
     "keywords": [],
     "author": "",
     "license": "MIT",
     "devDependencies": {
         "mocha": "^10.3.0"
+    },
+    "dependencies": {
+        "chai": "^4.2.0"
     }
 }

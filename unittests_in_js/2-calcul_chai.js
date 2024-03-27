@@ -20,4 +20,7 @@ function calculateNumber(type, a, b) {
     }
 }
 
+console.log(calculateNumber('DIVIDE', 1.4, 4.5));
+
+
 module.exports = calculateNumber;

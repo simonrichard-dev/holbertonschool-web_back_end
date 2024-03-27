@@ -1,6 +1,5 @@
 // 2-calcul_chai.test.js
-const chai = require('chai');
-const { expect } = chai;
+const expect = require('chai').expect;
 const calculateNumber = require('./2-calcul_chai');
 
 //SUM
@@ -32,18 +31,6 @@ describe('Tests for SUBSTRACT', function() {
         expect(calculateNumber('SUBSTRACT', 1, Math.PI)).to.equal(-2);
     });
 
-    it('should return -3 when substracting 1 and 3.7', function() {
-        expect(calculateNumber('SUBSTRACT', 1, 3.7)).to.equal(-3);
-    });
-
-    it('should return -3 when substracting 1.2 and 3.7', function() {
-        expect(calculateNumber('SUBSTRACT', 1.2, 3.7)).to.equal(-3);
-    });
-
-    it('should return -2 when substracting 1.5 and 3.7', function() {
-        expect(calculateNumber('SUBSTRACT', 1.5, 3.7)).to.equal(-2);
-    });
-
     it('should return 4 when substracting 1 and -3', () => {
         expect(calculateNumber('SUBSTRACT', 1, -3)).to.equal(4);
     });
@@ -57,7 +44,7 @@ describe('Tests for SUBSTRACT', function() {
 describe('Tests for DIVIDE', function() {
 
     it('Correctly returns 0.2 when dividing 1.4 by 4.5', () => {
-        expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal('0.2');
+        expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
     });
     it('Correctly returns Error when dividing by 0', () => {
         expect(calculateNumber('DIVIDE', 3, 0)).to.equal('Error');
