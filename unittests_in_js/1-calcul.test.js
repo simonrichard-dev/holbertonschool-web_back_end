@@ -27,6 +27,11 @@ describe('calculateNumber', function() {
     assert.strictEqual(calculateNumber('SUM', 1.5, 3.7), 6);
   });
 
+  it('Correctly returns an error for invalid input types', () => {
+    assert.throws(() => calculateNumber("a", 2), Error);
+    assert.throws(() => calculateNumber(2, "b"), Error);
+  })
+
   it('should return -2 when adding 1 and -3', () => {
     assert.equal(calculateNumber('SUM', 1, -3), -2);
   });
@@ -49,7 +54,7 @@ describe('calculateNumber', function() {
   it('should return -2 when substracting 1 and 3', function() {
     assert.strictEqual(calculateNumber('SUBSTRACT', 1, 3), -2);
   });
-  
+
   it('should return -2 when substracting 1 and PI', function() {
     assert.strictEqual(calculateNumber('SUBSTRACT', 1, Math.PI), -2);
   });
@@ -61,6 +66,11 @@ describe('calculateNumber', function() {
   it('should return -3 when substracting 1.2 and 3.7', function() {
     assert.strictEqual(calculateNumber('SUBSTRACT', 1.2, 3.7), -3);
   });
+
+  it('Correctly returns an error for invalid input types', () => {
+    assert.throws(() => calculateNumber("a", 2), Error);
+    assert.throws(() => calculateNumber(2, "b"), Error);
+  })
 
   it('should return -2 when substracting 1.5 and 3.7', function() {
     assert.strictEqual(calculateNumber('SUBSTRACT', 1.5, 3.7), -2);
@@ -80,7 +90,7 @@ describe('calculateNumber', function() {
   it('should return 4 when divide 1 and 3', function() {
     assert.strictEqual(calculateNumber('DIVIDE', 1, 3), 0.3333333333333333);
   });
-  
+
   it('should return 4 when divide 1 and PI', function() {
     assert.strictEqual(calculateNumber('DIVIDE', 1, Math.PI), 0.3333333333333333);
   });
@@ -88,6 +98,11 @@ describe('calculateNumber', function() {
   it('should return 5 when divide 1 and 3.7', function() {
     assert.strictEqual(calculateNumber('DIVIDE', 1, 3.7), 0.25);
   });
+
+  it('Correctly returns an error for invalid input types', () => {
+    assert.throws(() => calculateNumber("a", 2), Error);
+    assert.throws(() => calculateNumber(2, "b"), Error);
+  })
 
   it('should return 5 when divide 1.2 and 3.7', function() {
     assert.strictEqual(calculateNumber('DIVIDE', 1.2, 3.7), 0.25);
@@ -113,7 +128,7 @@ describe('calculateNumber', function() {
     assert.equal(calculateNumber('DIVIDE', 1, 0), 'Error');
   })
 
-  it('should return NaN when divide 0 and 0', () => {
+  it('should return Error when divide 0 and 0', () => {
     assert.equal(calculateNumber('DIVIDE', 0, 0), 'Error');
   })
 });
